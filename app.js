@@ -1,8 +1,8 @@
 
 function Converter(CEP) {
-    fetch("https://cep.awesomeapi.com.br/json/13380180")
+    fetch("https://cep.awesomeapi.com.br/json/" + CEP)
         .then((response) => response.json())
-        .then((data) => console.log(data))
+        .then((data) => alert(data.address + " - " + data.district + " - " + data.city + " - " + data.state ))
         .then((error) => console.log(error))
 }
 
